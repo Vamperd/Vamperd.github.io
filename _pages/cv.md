@@ -3,9 +3,11 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
+published: false
 redirect_from:
   - /resume
 ---
+<!-- This page is temporarily disabled. Will be activated when CV is ready. -->
 
 {% include base_path %}
 
