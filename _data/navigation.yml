@@ -14,6 +14,15 @@ main:
   - title: "Research"
     url: /research/
 
+  - title: "Project"
+    url: /project/
+
+  - title: "Award"
+    url: /award/
+
+  # - title: "CV"
+  #   url: /cv/
+
   # - title: "Publications"
   #   url: /publications/
 
@@ -28,9 +37,6 @@ main:
         
   # - title: "Blog Posts"
   #   url: /year-archive/
-    
-  # - title: "CV"
-  #   url: /cv/
     
   # - title: "CV"
   #   url: /cv-json/

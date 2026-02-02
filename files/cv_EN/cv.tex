@@ -1,0 +1,247 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\definecolor{sectioncolor}{RGB}{0, 102, 204}  % Define blue color for sections
+\titleformat{\section}{\Large\scshape\raggedright\color{sectioncolor}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} X r @{}}
+\Huge{Linying Bai} & \multirow{8}{*}{\includegraphics[width=3cm]{profile.jpg}} \\[3pt]
+\normalsize{\textit{Undergraduate}} & \\
+\normalsize{\textit{Zhejiang University, Automation}} & \\[10pt]
+\href{mailto:bailinying520@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ bailinying520@gmail.com} \ $|$ \ 
+\href{tel:+8613675518456}{\raisebox{-0.05\height}\faMobile \ (+86) 13675518456} & \\[3pt]
+\href{https://vamperd.github.io}{\raisebox{-0.05\height}\faGlobe \ vamperd.github.io} \ $|$ \ 
+\href{https://github.com/Vamperd}{\raisebox{-0.05\height}\faGithub\ Vamper} & \\
+\end{tabularx}
+\vspace{10pt}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+\section{Summary}
+I am currently a third-year undergraduate student at Zhejiang University, majoring in Automation and guided by Prof. RongHao Zheng. My research interests lie primarily in Legged Robot , Reinforcement Learning and Computer Vision. I am also passionate about exploring more research areas.
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2023 - 2027 & Automation at \textbf{Zhejiang University} \hfill \normalsize \\
+& College of Electrical Engineering \\
+& Advisor: Prof. RongHao Zheng \\
+&\textbf{Major GPA: 4.78/5.0 (Top 2\%) Overall GPA: 3.99/4.0} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	HONORS AND AWARDS
+%----------------------------------------------------------------------------------------
+\section{Honors \& Awards}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2024, 2025 & \textbf{First Prize}, National University Robot Competition "RoboMaster Super Match - National Championship" \\
+& 2024 (National Top 4), 2025 (National Top 8) \\[3.75pt]
+2025 & \textbf{First Prize}, National University Robot Competition "RoboMaster Super Match - Sentinel Robot Competition Award \\[3.75pt]
+2025 & \textbf{Provincial Government Scholarship} (Top 5\% Students), Zhejiang University \\
+2024, 2025 & \textbf{First Prize}, Chinese University Dragon and Lion Dance Championship \\[3.75pt]
+\end{tabularx}
+
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{RoboMaster Competition: Autonomous Sentry Robot Control Systems} & \hfill \href{https://vamperd.github.io/project/}{Oct 2024 - Aug 2025} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Spearheaded the full-stack system architecture for Sentry Robot. Responsibilities spanned from foundational hardware engineering (circuit design and soldering) to high-level software implementation,  establishing a low-latency system for autonomous host command execution. Deployed classical control algorithms (PID and LQR) on the physical robot ;Establishing state-space models , successfully suppressed dynamic oscillations in the Coarse-Fine Dual-Yaw gimbal and significantly improved tracking accuracy.This experience bridged the gap between theoretical modeling and engineering practice, solidifying my embedded programming foundation while deepening my passion for advanced robot control research.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{RoboMaster Competition: Vision-Based Guided Dart System} & \hfill \href{https://vamperd.github.io/project/}{ Aug 2025 - Present} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Contributed to the GNC architecture for a Precision-Guided Dart System. Responsibilities spanned from hardware integration to computer vision deployment, establishing a real-time loop for autonomous target acquisition. Deployed aerodynamic control algorithms and Proportional Navigation, successfully transitioning the system from static open-loop ballistics to active terminal homing. Currently advancing the platform by integrating active ducted-fan propulsion and Stereo VIO to enable active loitering capability and enriched sensory feedback, thereby significantly extending the effective guidance range. Significantly refined my capability to model and control complex dynamic systems,honed practical computer vision skills}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{HW-Components: Universal Robot Control Library} & \hfill \href{https://vamperd.github.io/project/}{Oct 2024 - Present} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{As a Core Contributor, architected a high-performance communication framework leveraging C++ template metaprogramming to automate protocol ID allocation. Implemented multi-rate scheduling, enabling precise frequency division and sequenced transmission for diverse data streams. Furthermore, developed an energy-model-based algorithm that dynamically regulates torque output relative to supercapacitor status and competition power limits, maximizing maneuvering agility,energy utilisation efficiency. Enhanced my engineering mindset and templated programming capabilities.}  \\
+\end{tabularx}
+
+%Experience
+\section{Research Experience}
+
+\begin{joblong}{Multi-Robot Coordination under Temporal Logic Constraints}{\href{https://vamperd.github.io/research/}{June 2025 - Present}}
+\item Analyzed the Linear Temporal Logic (LTL) framework to master formal modeling methods for complex sequential tasks.
+\item Reproduced SMT-based algorithms to understand the optimization mechanism for minimizing collaborative waiting times.
+\item Conducted simulation experiments to validate the logical correctness of coordination strategies.
+\item Gained foundational understanding of neural networks and reinforcement learning for dynamic robot control applications.
+\item Enhanced practical proficiency in simulation, algorithmic modeling, and implementation using Python and PyTorch.
+\end{joblong}
+
+\begin{joblong}{Research Intern @ HICAI-ZJU}{\href{https://github.com/HICAI-ZJU/SciKnowEval}{June 2024 - Sep 2024}}
+\item Analyzed LLM limitations, specifically identifying hallucinations and reasoning errors in medical QA tasks.
+\item Structured 50k+ data samples using Python, ensuring high-quality formatting for model benchmarking.
+\item Accelerated inference by self-learning \texttt{asyncio}, resolving API rate limits and latency for large-scale evaluation.
+\item Refined system prompts to enhance model accuracy on complex reasoning and safety judgment tasks.
+\item Executed full research workflow, from defining scientific taxonomies to performing quantitative analysis.
+\end{joblong}
+  
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+% \section{Publications}
+% \begin{refsection}[citations.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Programming Languages & \normalsize{C/C++, Python, MATLAB}\\
+Robotics Tools & \normalsize{ROS2, OpenCV, Isaac Gym, CMake, Git, Linux}\\
+Control Theory & \normalsize{PID, LQR, MPC, EKF, Adaptive Control}\\
+Machine Learning & \normalsize{PyTorch, Reinforcement Learning (PPO)}\\
+Embedded Systems & \normalsize{STM32, Raspberry Pi}\\
+\end{tabularx}
+
+% \vfill
+% \center{\footnotesize Last updated: \today}
+
+\end{document}

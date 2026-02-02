@@ -11,4 +11,7 @@ I am currently a **third-year** undergraduate student at the College of Control 
 Education
 =========
 
-**2023.09 - 2027.06** | B.E. in Automation, College of Electrical Engineering Zhejiang University
+**2023 - 2027** | Automation at **Zhejiang University**
+*   College of Electrical Engineering
+*   Advisor: Prof. RongHao Zheng
+*   **Major GPA: 4.78/5.0 (Top 2%) Overall GPA: 3.99/4.0**
