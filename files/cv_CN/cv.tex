@@ -12,7 +12,8 @@
 %	
 %	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 %	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+%	IN NO EVENT SHALL THE
 %	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 %	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 %	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
@@ -29,8 +30,11 @@
 \documentclass[a4paper,12pt]{article}
 
 %----------------------------------------------------------------------------------------
-%	FONT
+%	CHINESE SUPPORT & FONT
 %----------------------------------------------------------------------------------------
+
+% Added ctex for Chinese support. IMPORTANT: Compile with XeLaTeX.
+\usepackage[UTF8]{ctex}
 
 % % fontspec allows you to use TTF/OTF fonts directly
 % \usepackage{fontspec}
@@ -62,7 +66,7 @@
 %for lists within experience section
 \usepackage{enumitem}
 
-% centered version of 'X' col. type
+% centered version of 'X' col.
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
 
 %to prevent spillover of tabular into next pages
@@ -143,9 +147,9 @@
 % \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} X r @{}}
-\Huge{Linying Bai} & \multirow{8}{*}{\includegraphics[width=3cm]{profile.jpg}} \\[3pt]
-\normalsize{\textit{Undergraduate}} & \\
-\normalsize{\textit{Zhejiang University, Automation}} & \\[10pt]
+\Huge{白霖颖} & \multirow{8}{*}{\includegraphics[width=3cm]{profile.jpg}} \\[3pt]
+\normalsize{\textit{本科生}} & \\
+\normalsize{\textit{浙江大学—自动化}} & \\[10pt]
 \href{mailto:bailinying520@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ bailinying520@gmail.com} \ $|$ \ 
 \href{tel:+8613675518456}{\raisebox{-0.05\height}\faMobile \ (+86) 13675518456} & \\[3pt]
 \href{https://vamperd.github.io}{\raisebox{-0.05\height}\faGlobe \ vamperd.github.io} \ $|$ \ 
@@ -157,69 +161,68 @@
 % EXPERIENCE SECTIONS
 %----------------------------------------------------------------------------------------
 
-\section{Summary}
-I am currently a third-year undergraduate student at Zhejiang University, majoring in Automation and guided by Prof. RongHao Zheng. My research interests lie primarily in Legged Robot , Reinforcement Learning and Computer Vision. I am also passionate about exploring more research areas.
+\section{个人简介}
+我目前是浙江大学自动化专业的大三本科生，导师为郑荣濠教授。我的研究兴趣主要集中在足式机器人、强化学习和计算机视觉领域。同时，我也热衷于探索更多的研究方向。
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-\section{Education}
+\section{教育背景}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
-2023 - 2027 & Automation at \textbf{Zhejiang University} \hfill \normalsize \\
-& College of Electrical Engineering \\
-& Advisor: Prof. RongHao Zheng \\
-&\textbf{Major GPA: 4.78/5.0 (Top 2\%) Overall GPA: 3.99/4.0} \\
+2023 - 2027 & 工学学士，\textbf{浙江大学} 自动化 \hfill \normalsize \\
+& 电气工程学院 \\
+& 导师：郑荣濠 教授 \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	HONORS AND AWARDS
 %----------------------------------------------------------------------------------------
-\section{Honors \& Awards}
+\section{荣誉奖项}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-2024, 2025 & \textbf{First Prize}, National University Robot Competition "RoboMaster Super Match - National Championship" \\
-& 2024 (National Top 4), 2025 (National Top 8) \\[3.75pt]
-2025 & \textbf{First Prize}, National University Robot Competition "RoboMaster Super Match - Sentinel Robot Competition Award \\[3.75pt]
-2025 & \textbf{Provincial Government Scholarship} (Top 5\% Students), Zhejiang University \\
-2024, 2025 & \textbf{First Prize}, Chinese University Dragon and Lion Dance Championship \\[3.75pt]
-\end{tabularx}
-
-%Projects
-\section{Projects}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{RoboMaster Competition: Autonomous Sentry Robot Control Systems} & \hfill \href{https://vamperd.github.io/project/}{Oct 2024 - Aug 2025} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Spearheaded the full-stack system architecture for Sentry Robot. Responsibilities spanned from foundational hardware engineering (circuit design and soldering) to high-level software implementation,  establishing a low-latency system for autonomous host command execution. Deployed classical control algorithms (PID and LQR) on the physical robot ;Establishing state-space models , successfully suppressed dynamic oscillations in the Coarse-Fine Dual-Yaw gimbal and significantly improved tracking accuracy.This experience bridged the gap between theoretical modeling and engineering practice, solidifying my embedded programming foundation while deepening my passion for advanced robot control research.}  \\
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{RoboMaster Competition: Vision-Based Guided Dart System} & \hfill \href{https://vamperd.github.io/project/}{ Aug 2025 - Present} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Contributed to the GNC architecture for a Precision-Guided Dart System. Responsibilities spanned from hardware integration to computer vision deployment, establishing a real-time loop for autonomous target acquisition. Deployed aerodynamic control algorithms and Proportional Navigation, successfully transitioning the system from static open-loop ballistics to active terminal homing. Currently advancing the platform by integrating active ducted-fan propulsion and Stereo VIO to enable active loitering capability and enriched sensory feedback, thereby significantly extending the effective guidance range. Significantly refined my capability to model and control complex dynamic systems,honed practical computer vision skills}  \\
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{HW-Components: Universal Robot Control Library} & \hfill \href{https://vamperd.github.io/project/}{Oct 2024 - Present} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{As a Core Contributor, architected a high-performance communication framework leveraging C++ template metaprogramming to automate protocol ID allocation. Implemented multi-rate scheduling, enabling precise frequency division and sequenced transmission for diverse data streams. Furthermore, developed an energy-model-based algorithm that dynamically regulates torque output relative to supercapacitor status and competition power limits, maximizing maneuvering agility,energy utilisation efficiency. Enhanced my engineering mindset and templated programming capabilities.}  \\
+2024, 2025 & \textbf{一等奖}，全国大学生机器人大赛 RoboMaster 机甲大师超级对抗赛 \\
+& 2024 (全国四强)，2025 (全国八强) \\[3.75pt]
+2025 & \textbf{一等奖}, 全国大学生机器人竞赛"RoboMaster机甲大师超级对抗赛-哨兵机器人竞赛奖" \\[3.75pt]
+2025 & \textbf{浙江省省政府奖学金} (前 5\% ), 浙江大学 \\
+2024, 2025 & \textbf{一等奖}, 全国大学生舞龙舞狮锦标赛-舞狮项目 \\[3.75pt]
 \end{tabularx}
 
 %Experience
-\section{Research Experience}
+\section{研究经历}
 
-\begin{joblong}{Multi-Robot Coordination under Temporal Logic Constraints}{\href{https://vamperd.github.io/research/}{June 2025 - Present}}
-\item Analyzed the Linear Temporal Logic (LTL) framework to master formal modeling methods for complex sequential tasks.
-\item Reproduced SMT-based algorithms to understand the optimization mechanism for minimizing collaborative waiting times.
-\item Conducted simulation experiments to validate the logical correctness of coordination strategies.
-\item Gained foundational understanding of neural networks and reinforcement learning for dynamic robot control applications.
-\item Enhanced practical proficiency in simulation, algorithmic modeling, and implementation using Python and PyTorch.
+\begin{joblong}{时序逻辑约束下的多机器人协调}{\href{https://vamperd.github.io/research/}{2025年6月 - 至今}}
+\item 分析线性时序逻辑（LTL）框架，掌握复杂顺序任务的形式化建模方法
+\item 复现基于 SMT 的算法，理解最小化协作等待时间的优化机制
+\item 开展仿真实验，验证协调策略的逻辑正确性
+\item 建立神经网络和强化学习的基础理解，用于动态机器人控制应用
+\item 提升了使用 Python 和 PyTorch 进行仿真、算法建模和实现的实践能力
 \end{joblong}
 
-\begin{joblong}{Research Intern @ HICAI-ZJU}{\href{https://github.com/HICAI-ZJU/SciKnowEval}{June 2024 - Sep 2024}}
-\item Analyzed LLM limitations, specifically identifying hallucinations and reasoning errors in medical QA tasks.
-\item Structured 50k+ data samples using Python, ensuring high-quality formatting for model benchmarking.
-\item Accelerated inference by self-learning \texttt{asyncio}, resolving API rate limits and latency for large-scale evaluation.
-\item Refined system prompts to enhance model accuracy on complex reasoning and safety judgment tasks.
-\item Executed full research workflow, from defining scientific taxonomies to performing quantitative analysis.
+\begin{joblong}{研究实习生 @ HICAI-ZJU}{\href{https://github.com/HICAI-ZJU/SciKnowEval}{2024年6月 - 2024年9月}}
+\item 分析大语言模型的局限性，特别是识别医疗问答任务中的幻觉和推理错误
+\item 使用 Python 结构化处理 5 万余条数据样本，确保模型基准测试的高质量格式
+\item 自学 \texttt{asyncio} 加速推理，解决大规模评估中的 API 速率限制和延迟问题
+\item 优化系统提示词，提升模型在复杂推理和安全判断任务上的准确性
+\item 执行完整的研究流程，从定义科学分类体系到进行定量分析
 \end{joblong}
   
+%Projects
+\section{项目经历}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{RoboMaster 竞赛：自主哨兵机器人控制系统} & \hfill \href{https://vamperd.github.io/project/}{2024年10月 - 2025年8月} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{主导哨兵机器人全栈系统架构设计。工作涵盖从基础硬件工程（电路设计与焊接）到高层软件实现，构建了用于自主上位机指令执行的低延迟系统。在实体机器人上部署经典控制算法（PID 和 LQR）；通过建立状态空间模型，成功抑制了粗精双 Yaw 轴云台的动态振荡，显著提升了跟踪精度。这段经历弥合了理论建模与工程实践之间的鸿沟，夯实了我的嵌入式编程基础，同时加深了我对先进机器人控制研究的热情。}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{RoboMaster 竞赛：视觉引导制导飞镖系统} & \hfill \href{https://vamperd.github.io/project/}{2025年8月 - 至今} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{参与精确制导飞镖系统的 GNC（制导、导航与控制）架构设计。工作涵盖从硬件集成到计算机视觉部署，建立了用于自主目标捕获的实时控制回路。部署了气动控制算法和比例导引法，成功将系统从静态开环弹道升级为主动末端制导。目前正通过集成主动涵道风扇推进系统和双目视觉惯性里程计（Stereo VIO）来升级平台，以实现主动盘旋能力和丰富的感知反馈，从而显著扩展有效制导距离。这段经历大幅提升了我对复杂动态系统建模与控制的能力，并磨练了实际的计算机视觉技能。}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{HW-Components：通用机器人控制库} & \hfill \href{https://vamperd.github.io/project/}{2024年10月 - 至今} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{作为核心贡献者，利用 C++ 模板元编程设计了高性能通信框架，实现协议 ID 的自动分配。实现了多速率调度功能，支持不同数据流的精确分频和顺序传输。此外，开发了基于能量模型的算法，根据超级电容状态和比赛功率限制动态调节扭矩输出，最大化机动灵活性和能量利用效率。这段经历提升了我的工程思维和模板编程能力。}  \\
+\end{tabularx}
+
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
@@ -232,13 +235,13 @@ I am currently a third-year undergraduate student at Zhejiang University, majori
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
-\section{Skills}
+\section{专业技能}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Programming Languages & \normalsize{C/C++, Python, MATLAB}\\
-Robotics Tools & \normalsize{ROS2, OpenCV, Isaac Gym, CMake, Git, Linux}\\
-Control Theory & \normalsize{PID, LQR, MPC, EKF, Adaptive Control}\\
-Machine Learning & \normalsize{PyTorch, Reinforcement Learning (PPO)}\\
-Embedded Systems & \normalsize{STM32, Raspberry Pi}\\
+编程语言 & \normalsize{C/C++, Python, MATLAB}\\
+机器人工具 & \normalsize{ROS2, OpenCV, Isaac Gym, CMake, Git, Linux}\\
+控制理论 & \normalsize{PID, LQR, MPC, EKF, 自适应控制}\\
+机器学习 & \normalsize{PyTorch, 强化学习 (PPO)}\\
+嵌入式系统 & \normalsize{STM32, Raspberry Pi}\\
 \end{tabularx}
 
 % \vfill

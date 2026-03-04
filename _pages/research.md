@@ -27,5 +27,6 @@ Analyzed the Linear Temporal Logic (LTL) framework to master formal modeling met
 <img src="/images/reserach_SciKnowEval.png" alt="SciKnowEval Framework" width="300" style="float: right; margin-right: 20px; margin-bottom: 10px;">
 
 Analyzed LLM limitations, specifically identifying hallucinations and reasoning errors in medical QA tasks. Structured 50k+ data samples using Python, ensuring high-quality formatting for model benchmarking. Accelerated inference by self-learning `asyncio`, resolving API rate limits and latency for large-scale evaluation. Refined system prompts to enhance model accuracy on complex reasoning and safety judgment tasks. Executed full research workflow, from defining scientific taxonomies to performing quantitative analysis.
+https://github.com/HICAI-ZJU/SciKnowEval
 
 <div style="clear: both;"></div>

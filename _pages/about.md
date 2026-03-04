@@ -14,4 +14,4 @@ Education
 **2023 - 2027** | Automation at **Zhejiang University**
 *   College of Electrical Engineering
 *   Advisor: Prof. RongHao Zheng
-*   **Major GPA: 4.78/5.0 (Top 2%) Overall GPA: 3.99/4.0**
+*   **Major GPA: 4.76/5.0 (Top 1%) Overall GPA: 3.99/4.0**
