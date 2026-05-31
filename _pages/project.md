@@ -34,6 +34,14 @@ Contributed to the GNC architecture for a Precision-Guided Dart System. Responsi
   <em>Dart System In Action</em>
 </div>
 
+<div style="display: flex; justify-content: center; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 18px;">
+  <img src="/images/project_dart_record.png" alt="Dart System Flight Record" style="width: 32%; min-width: 220px; max-width: 270px;">
+  <img src="/images/project_dart_record_2.png" alt="Dart System Flight Record Details" style="width: 56%; min-width: 300px; max-width: 540px;">
+</div>
+<div style="text-align: center; margin-top: 6px;">
+  <em>Dart System Flight Records</em>
+</div>
+
 <div style="clear: both;"></div>
 
 ---
