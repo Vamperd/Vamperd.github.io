@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Hi, I'm Linying"
+title                    : "Linying Bai"
 title_separator          : "-"
 name                     : &name "Linying Bai"
 description              : &description "Linying Bai's academic portfolio"

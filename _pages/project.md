@@ -1,12 +1,17 @@
 ---
-layout: archive
-title: "Project"
+layout: profile-page
+title: "Build"
 permalink: /project/
-author_profile: true
+lang: en
+alternate_url: /zh/build/
+kicker: "Build / from models to machines"
+lead: "Selected systems work where control, perception, hardware, and team execution have to meet real constraints."
 ---
 ---
 
-## **Oct 2024 - Aug 2025 | RoboMaster Competition: Autonomous Sentry Robot Control Systems**
+## Autonomous Sentry Robot Control Systems
+
+<div class="case-note"><strong>RoboMaster · October 2024 – August 2025</strong><br>System architecture and control work for an autonomous sentry robot.</div>
 
 <img src="/images/project_sentry.png" alt="Sentry Robot" width="300" style="float: right; margin-right: 20px; margin-bottom: 10px;">
 
@@ -22,7 +27,9 @@ Spearheaded the full-stack system architecture for Sentry Robot. Responsibilitie
 
 ---
 
-## **Aug 2025 - Present | RoboMaster Competition: Vision-Based Guided Dart System**
+## Vision-Based Guided Dart System
+
+<div class="case-note"><strong>RoboMaster · August 2025 – Present</strong><br>Guidance, navigation, and control for a precision-guided dart platform.</div>
 
 <img src="/images/project_dart.png" alt="Dart System" width="300" style="float: right; margin-right: 20px; margin-bottom: 10px;">
 
@@ -46,7 +53,9 @@ Contributed to the GNC architecture for a Precision-Guided Dart System. Responsi
 
 ---
 
-## **Oct 2024 - Present | HW-Components: Universal Robot Control Library**
+## HW-Components: Universal Robot Control Library
+
+<div class="case-note"><strong>October 2024 – Present · Core contributor</strong><br>Reusable communication, scheduling, and power-management components for competition robots.</div>
 
 As a Core Contributor, architected a high-performance communication framework leveraging C++ template metaprogramming to automate protocol ID allocation. Implemented multi-rate scheduling, enabling precise frequency division and sequenced transmission for diverse data streams. Furthermore, developed an energy-model-based algorithm that dynamically regulates torque output relative to supercapacitor status and competition power limits, maximizing maneuvering agility and energy utilisation efficiency. Enhanced my engineering mindset and templated programming capabilities.
 

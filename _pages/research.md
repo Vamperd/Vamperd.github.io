@@ -1,12 +1,17 @@
 ---
-layout: archive
+layout: profile-page
 title: "Research"
 permalink: /research/
-author_profile: true
+lang: en
+alternate_url: /zh/research/
+kicker: "Research / systems thinking"
+lead: "Questions that grow from real systems: how to coordinate, reason, and control robots when the world is dynamic."
 ---
 ---
 
-## **June 2025 - Present | Multi-Robot Coordination under Temporal Logic Constraints**
+## Multi-Robot Coordination under Temporal Logic Constraints
+
+<div class="case-note"><strong>June 2025 – Present · Research focus</strong><br>Formal modeling and coordination for complex sequential tasks performed by multiple robots.</div>
 
 <img src="/images/reserach_multitask_1.png" alt="Multi-Robot Coordination" width="300" style="float: right; margin-right: 20px; margin-bottom: 10px;">
 
@@ -22,7 +27,9 @@ Analyzed the Linear Temporal Logic (LTL) framework to master formal modeling met
 
 ---
 
-## **June 2024 - Sep 2024 | Research Intern @ HICAI-ZJU**
+## Research Intern @ HICAI-ZJU
+
+<div class="case-note"><strong>June 2024 – September 2024 · Research experience</strong><br>Evaluation and analysis of large-language-model reasoning and safety in medical QA.</div>
 
 <img src="/images/reserach_SciKnowEval.png" alt="SciKnowEval Framework" width="300" style="float: right; margin-right: 20px; margin-bottom: 10px;">
 

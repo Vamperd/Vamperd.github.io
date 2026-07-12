@@ -79,3 +79,16 @@
   border-bottom: 2px solid var(--global-text-color);
   /* No need to repeat pointer-events and cursor here */
 }
+
+.masthead__action {
+  margin: 0 .5rem;
+  padding: .35rem .65rem;
+  border: 1px solid var(--global-masthead-link-color);
+  border-radius: 999px;
+  font-size: .82rem;
+}
+
+.language-switch {
+  font-size: .82rem;
+  font-weight: 700;
+}

@@ -8,17 +8,23 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "About"
+  - title: "Home"
     url: /
 
   - title: "Research"
     url: /research/
 
-  - title: "Project"
+  - title: "Build"
     url: /project/
 
-  - title: "Award"
-    url: /award/
+  - title: "Teams"
+    url: /teams/
+
+  - title: "Notes"
+    url: /notes/
+
+  - title: "About"
+    url: /about/
 
   # - title: "CV"
   #   url: /cv/
@@ -43,3 +49,17 @@ main:
     
   # - title: "Guide"
   #   url: /markdown/
+
+zh:
+  - title: "首页"
+    url: /zh/
+  - title: "研究"
+    url: /zh/research/
+  - title: "构建"
+    url: /zh/build/
+  - title: "团队"
+    url: /zh/teams/
+  - title: "随笔"
+    url: /zh/notes/
+  - title: "关于"
+    url: /zh/about/
