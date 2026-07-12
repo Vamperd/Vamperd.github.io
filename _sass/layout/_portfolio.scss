@@ -60,7 +60,7 @@ html[data-theme="dark"] {
 }
 
 .portfolio-hero__copy { display: flex; flex-direction: column; justify-content: center; }
-.portfolio-hero h1 { margin: 0; max-width: 760px; font-size: clamp(3rem, 7vw, 6.3rem); line-height: .92; }
+.portfolio-hero h1 { margin: 0; max-width: 760px; font-size: clamp(2.5rem, 5vw, 4.75rem); line-height: .98; }
 .portfolio-hero__lead { max-width: 610px; margin: 1.55rem 0 0; color: var(--portfolio-muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.55; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 2rem; }
 
@@ -133,6 +133,10 @@ html[data-theme="dark"] {
 .story-content > h2 { margin: 3rem 0 1rem; padding-top: .8rem; border-top: 1px solid var(--portfolio-line); font-size: 2rem; }
 .story-content > h3 { margin: 2.2rem 0 .7rem; font-size: 1.35rem; }
 .story-content p, .story-content li { color: var(--portfolio-muted); font-size: 1.04rem; line-height: 1.72; }
+.story-content img { max-width: 100%; height: auto; border-radius: 12px; }
+.story-content .media-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; clear: both; margin: 2rem 0; }
+.story-content .media-gallery figure { display: block; margin: 0; }
+.story-content .media-gallery img { display: block; width: 100%; }
 .story-content .case-note { margin: 1.25rem 0; padding: 1.2rem 1.3rem; border-left: 3px solid var(--portfolio-cyan); background: var(--portfolio-paper); }
 .story-content .case-note--team { border-left-color: var(--portfolio-red); }
 .story-content .story-photo-placeholder { display: grid; min-height: 210px; place-items: center; margin: 1.3rem 0; border: 1px dashed var(--portfolio-line); border-radius: 14px; color: var(--portfolio-muted); background: var(--portfolio-paper); text-align: center; }
@@ -144,6 +148,7 @@ html[data-theme="dark"] {
   .hero-composition { min-height: 280px; }
   .section-heading { grid-template-columns: 1fr; gap: .65rem; }
   .feature-grid, .story-grid { grid-template-columns: 1fr; }
+  .story-content .media-gallery { grid-template-columns: 1fr; }
   .currents { grid-template-columns: 1fr; }
   .portfolio-section { padding: 3.25rem 0; }
 }

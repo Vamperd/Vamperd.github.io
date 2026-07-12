@@ -12,7 +12,7 @@ lead: "控制、感知、硬件和团队执行必须同时面对真实约束的�
 
 <div class="case-note"><strong>RoboMaster · 2024 年 10 月–2025 年 8 月</strong><br>自主哨兵机器人的系统架构与控制工作。</div>
 
-<img src="/images/project_sentry.png" alt="自主哨兵机器人" width="300" style="float:right; margin:0 0 1rem 1.2rem;">
+<img src="{{ '/images/project_sentry.png' | relative_url }}" alt="Autonomous sentry robot" width="300" style="float:right; margin:0 0 1rem 1.2rem;">
 
 负责从电路设计、焊接等硬件基础到高层软件实现的系统架构，构建低延迟的自主主控指令执行系统。在实机上部署 PID 与 LQR 控制，建立状态空间模型，抑制粗精双云台的动态振荡并改善跟踪精度。
 
@@ -22,7 +22,7 @@ lead: "控制、感知、硬件和团队执行必须同时面对真实约束的�
 
 <div class="case-note"><strong>RoboMaster · 2025 年 8 月至今</strong><br>精确制导飞镖平台的制导、导航与控制。</div>
 
-<img src="/images/project_dart.png" alt="视觉制导飞镖系统" width="300" style="float:right; margin:0 0 1rem 1.2rem;">
+<img src="{{ '/images/project_dart.png' | relative_url }}" alt="Vision-guided dart system" width="300" style="float:right; margin:0 0 1rem 1.2rem;">
 
 参与飞镖系统的 GNC 架构，覆盖硬件集成与计算机视觉部署，建立自主目标获取的实时闭环。系统采用气动控制与比例导航，实现从静态开环弹道向末端主动制导的转换；平台正在继续整合主动涵道风扇推进与双目 VIO。
 

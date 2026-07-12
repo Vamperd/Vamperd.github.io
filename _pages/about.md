@@ -17,7 +17,7 @@ alternate_url: /zh/
     </div>
   </div>
   <div class="hero-composition">
-    <img src="/images/project_sentry.png" alt="Autonomous RoboMaster sentry robot in competition" fetchpriority="high">
+    <img src="{{ '/images/dart_hit.jpg' | relative_url }}" alt="RoboMaster dart system in action" fetchpriority="high">
     <div class="hero-composition__badge"><strong>Working principle</strong><span>From a model on paper to a system that earns its place in a team.</span></div>
   </div>
 </section>
@@ -40,7 +40,7 @@ alternate_url: /zh/
   </div>
   <div class="feature-grid">
     <article class="feature-card"><div class="feature-card__media"><img src="/images/project_sentry.png" alt="RoboMaster autonomous sentry robot"></div><div class="feature-card__body"><p class="card-kicker">RoboMaster · 2024–25</p><h3>Autonomous Sentry</h3><p>Control architecture for an autonomous sentry robot, from hardware foundations to low-latency command execution.</p><a class="feature-card__meta" href="/project/#autonomous-sentry-robot-control-systems">View case study →</a></div></article>
-    <article class="feature-card"><div class="feature-card__media"><img src="/images/project_dart.png" alt="Vision-guided RoboMaster dart system"></div><div class="feature-card__body"><p class="card-kicker">RoboMaster · Present</p><h3>Vision-Guided Dart</h3><p>A real-time loop for target acquisition, guidance, and an evolving autonomous flight platform.</p><a class="feature-card__meta" href="/project/#vision-based-guided-dart-system">View case study →</a></div></article>
+    <article class="feature-card"><div class="feature-card__media"><img src="{{ '/images/dart_hit.jpg' | relative_url }}" alt="RoboMaster dart system in action"></div><div class="feature-card__body"><p class="card-kicker">RoboMaster · Present</p><h3>Vision-Guided Dart</h3><p>A real-time loop for target acquisition, guidance, and an evolving autonomous flight platform.</p><a class="feature-card__meta" href="/project/#vision-based-guided-dart-system">View case study →</a></div></article>
     <article class="feature-card"><div class="feature-card__media"><img src="/images/reserach_multitask_1.png" alt="Multi-robot coordination visualization"></div><div class="feature-card__body"><p class="card-kicker">Research · 2025–present</p><h3>Coordinated Robots</h3><p>Temporal-logic modeling and simulation for collaborative robots carrying out sequential tasks.</p><a class="feature-card__meta" href="/research/#multi-robot-coordination-under-temporal-logic-constraints">View research →</a></div></article>
   </div>
 </section>
