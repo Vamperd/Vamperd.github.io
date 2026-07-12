@@ -18,6 +18,10 @@ lead: "从真实系统中生长的问题：当世界不断变化，如何协调�
 
 <div style="clear:both"></div>
 
+<div class="media-gallery" aria-label="Multi-robot coordination strategy">
+  <figure><img src="{{ '/images/reserach_multitask_2.png' | relative_url }}" alt="Multi-robot coordination strategy" loading="lazy"></figure>
+</div>
+
 ## HICAI-ZJU 科研实习
 
 <div class="case-note"><strong>2024 年 6–9 月 · 科研经历</strong><br>面向医学问答的大语言模型推理与安全性评估。</div>

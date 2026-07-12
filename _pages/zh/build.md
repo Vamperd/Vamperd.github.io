@@ -18,6 +18,10 @@ lead: "控制、感知、硬件和团队执行必须同时面对真实约束的�
 
 <div style="clear:both"></div>
 
+<div class="media-gallery" aria-label="Autonomous sentry robot demonstration">
+  <figure><img src="{{ '/images/project_sentrymatch.gif' | relative_url }}" alt="Autonomous sentry robot demonstration" loading="lazy"></figure>
+</div>
+
 ## 视觉制导飞镖系统
 
 <div class="case-note"><strong>RoboMaster · 2025 年 8 月至今</strong><br>精确制导飞镖平台的制导、导航与控制。</div>
@@ -27,6 +31,12 @@ lead: "控制、感知、硬件和团队执行必须同时面对真实约束的�
 参与飞镖系统的 GNC 架构，覆盖硬件集成与计算机视觉部署，建立自主目标获取的实时闭环。系统采用气动控制与比例导航，实现从静态开环弹道向末端主动制导的转换；平台正在继续整合主动涵道风扇推进与双目 VIO。
 
 <div style="clear:both"></div>
+
+<div class="media-gallery" aria-label="Vision-guided dart system demonstration and flight records">
+  <figure><img src="{{ '/images/project_dartmatch.gif' | relative_url }}" alt="Vision-guided dart system demonstration" loading="lazy"></figure>
+  <figure><img src="{{ '/images/project_dart_record.png' | relative_url }}" alt="Dart system flight record" loading="lazy"></figure>
+  <figure><img src="{{ '/images/project_dart_record_2.png' | relative_url }}" alt="Detailed dart system flight record" loading="lazy"></figure>
+</div>
 
 ## HW-Components 通用机器人控制库
 

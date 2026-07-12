@@ -11,19 +11,6 @@ layout: default
     </header>
     <div class="story-content">
       {{ content }}
-      {% if page.lang == 'zh' and page.url == '/zh/build/' %}
-      <div class="media-gallery" aria-label="Project demonstrations">
-        <figure><img src="{{ '/images/project_sentrymatch.gif' | relative_url }}" alt="Autonomous sentry robot demonstration" loading="lazy"></figure>
-        <figure><img src="{{ '/images/project_dartmatch.gif' | relative_url }}" alt="Vision-guided dart system demonstration" loading="lazy"></figure>
-        <figure><img src="{{ '/images/project_dart_record.png' | relative_url }}" alt="Dart system flight record" loading="lazy"></figure>
-        <figure><img src="{{ '/images/project_dart_record_2.png' | relative_url }}" alt="Detailed dart system flight record" loading="lazy"></figure>
-      </div>
-      {% elsif page.lang == 'zh' and page.url == '/zh/research/' %}
-      <div class="media-gallery" aria-label="Research visualizations">
-        <figure><img src="{{ '/images/reserach_multitask_2.png' | relative_url }}" alt="Multi-robot coordination strategy" loading="lazy"></figure>
-        <figure><img src="{{ '/images/reserach_SciKnowEval.png' | relative_url }}" alt="SciKnowEval framework" loading="lazy"></figure>
-      </div>
-      {% endif %}
     </div>
   </article>
 </div>
