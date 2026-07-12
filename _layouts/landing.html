@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
-<main class="portfolio-shell portfolio-shell--landing" id="main-content">
-  {{ content }}
-</main>
+<div id="main" role="main">
+  {% include sidebar.html %}
+  <article class="portfolio-shell portfolio-shell--landing" id="main-content">
+    {{ content }}
+  </article>
+</div>

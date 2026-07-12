@@ -26,6 +26,11 @@ html[data-theme="dark"] {
   width: min(1160px, calc(100% - 2rem));
   margin: 0 auto;
   color: var(--portfolio-ink);
+
+  @include breakpoint($large) {
+    @include span(10 of 12 last);
+    @include prefix(.5 of 12);
+  }
 }
 
 .portfolio-shell--landing { padding: 2.25rem 0 5rem; }
