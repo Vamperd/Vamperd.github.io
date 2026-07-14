@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Private TODO</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="overline" id="today-label">TODAY</p>
+        <h1>Make the day visible.</h1>
+      </div>
+      <div class="topbar-actions">
+        <button class="ghost-button" id="archive-button" type="button">Archive</button>
+        <button class="primary-button" id="add-task-button" type="button">+ Add task</button>
+      </div>
+    </header>
+
+    <section class="progress-strip" aria-label="Daily progress">
+      <div class="progress-copy">
+        <span id="progress-count">0 of 0</span>
+        <span>daily rituals complete</span>
+      </div>
+      <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
+      <strong id="progress-percent">0%</strong>
+    </section>
+
+    <div class="workspace">
+      <main class="domain-stack" id="domain-stack" aria-live="polite"></main>
+
+      <aside class="calendar-panel" aria-labelledby="calendar-heading">
+        <div class="calendar-head">
+          <button class="icon-button" id="prev-month" type="button" aria-label="Previous month">←</button>
+          <h2 id="calendar-heading">Month</h2>
+          <button class="icon-button" id="next-month" type="button" aria-label="Next month">→</button>
+        </div>
+        <div class="weekday-row" aria-hidden="true">
+          <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+        </div>
+        <div class="calendar-grid" id="calendar-grid"></div>
+        <p class="calendar-detail" id="calendar-detail">Select a day to inspect its daily check-in.</p>
+        <div class="calendar-legend" aria-label="Calendar status legend">
+          <span><i class="status-dot complete"></i>Complete</span>
+          <span><i class="status-dot partial"></i>Partial</span>
+          <span><i class="status-dot missed"></i>Missed</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <dialog id="task-dialog" class="modal">
+    <form id="task-form" method="dialog">
+      <div class="modal-head">
+        <div><p class="overline" id="form-mode">NEW TASK</p><h2 id="form-title">Add a task</h2></div>
+        <button class="icon-button" type="button" id="close-dialog" aria-label="Close">×</button>
+      </div>
+      <input type="hidden" id="task-id">
+      <label class="field">
+        <span>Title</span>
+        <input id="task-title" maxlength="200" required autocomplete="off" placeholder="What deserves your attention?">
+      </label>
+      <label class="field">
+        <span>Notes <small>optional</small></span>
+        <textarea id="task-details" maxlength="4000" rows="4" placeholder="Context, next step, or a useful constraint"></textarea>
+      </label>
+      <div class="field-grid">
+        <label class="field"><span>Task shape</span><select id="task-type"><option value="standalone">Standalone</option><option value="group">Task group</option></select></label>
+        <label class="field"><span>Area</span><select id="task-domain"><option value="daily_life">Daily Life</option><option value="robomaster_team">RoboMaster Team</option><option value="phd_learning">PhD Learning</option></select></label>
+      </div>
+      <div class="field-grid">
+        <label class="field"><span>Rhythm</span><select id="task-cadence"><option value="daily">Daily</option><option value="long_term">Long Term</option></select></label>
+        <label class="field due-field" id="due-field"><span>Due date <small>optional</small></span><input id="task-due-date" type="date"></label>
+      </div>
+      <section class="group-editor is-hidden" id="group-editor" aria-labelledby="group-editor-title">
+        <div class="group-editor-head">
+          <div>
+            <p class="overline" id="group-editor-kicker">ROTATION</p>
+            <h3 id="group-editor-title">Sequence</h3>
+          </div>
+          <p id="group-editor-help">Complete one item to move to the next day.</p>
+        </div>
+        <div class="group-item-editor-list" id="group-item-editor-list"></div>
+        <div class="group-editor-actions">
+          <button class="ghost-button" id="add-child-button" type="button">+ Add child</button>
+          <button class="ghost-button" id="add-rest-button" type="button">+ Insert rest day</button>
+        </div>
+      </section>
+      <p class="form-error" id="form-error" role="alert"></p>
+      <div class="modal-actions">
+        <button class="danger-button is-hidden" id="archive-task-button" type="button">Archive task</button>
+        <button class="ghost-button is-hidden" id="pause-task-button" type="button">Pause daily</button>
+        <button class="ghost-button is-hidden" id="move-task-up" type="button" aria-label="Move task up">↑ Up</button>
+        <button class="ghost-button is-hidden" id="move-task-down" type="button" aria-label="Move task down">↓ Down</button>
+        <span class="action-spacer"></span>
+        <button class="ghost-button" id="cancel-task-button" type="button">Cancel</button>
+        <button class="primary-button" type="submit">Save task</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="archive-dialog" class="modal archive-modal">
+    <div class="modal-head">
+      <div><p class="overline">HISTORY</p><h2>Archive</h2></div>
+      <button class="icon-button" type="button" id="close-archive" aria-label="Close">×</button>
+    </div>
+    <div id="archive-list" class="archive-list"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span id="toast-message"></span>
+    <button id="toast-undo" type="button">Undo</button>
+  </div>
+
+  <template id="empty-template">
+    <div class="empty-state"><span>·</span><p>Nothing here yet.</p></div>
+  </template>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
